@@ -5,17 +5,29 @@
     <title></title>
 </head>
 <body>
-
+<form>
+    <img id="myball" src="https://upload.wikimedia.org/wikipedia/commons/6/6e/Football_%28soccer_ball%29.svg" style = "width: 10%"/>
+    <p>Click button below to move the image to right</p>
+    <input type="button" value="Click Me" onclick="moveRight()" />
+</form>
 <script>
-    let login = prompt('username');
-    let messenger = (login == "emtyloyee") ?
-        'Hello' :
-        (login == 'Director') ?
-            'Greetings' :
-            (login == '') ?
-                'No login' :
-                '';
-    alert(messenger);
+
+     let pic =  document.getElementById("myball");
+    function init() {
+        pic =document.getElementById('myball');
+        pic .style.position = 'relative';
+        pic .style.left = "0px";
+    }
+    function moveRight() {
+        pic.style.left = parseInt(pic.style.left) + 10+"px";
+    }
+    window.onload = init ;
+
+
+</script>
+<script>
+
+
 
 
 
